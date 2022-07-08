@@ -1,0 +1,40 @@
+*{
+    background-color: rgb(238, 235, 235);
+}
+
+h1 {
+    margin-left: 6rem;
+    font-size: 20px;
+}
+
+.calc1 {
+    background-color: rgb(221, 221, 221);
+    border: 1px solid;
+    border-radius: 5px;
+    width: 400px;
+    height: 550px;
+    margin-left: 1rem;
+    
+}
+
+.calc1 h2 {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: rgb(221, 221, 221);
+}
+
+.calc1 input {
+    margin-left: 1rem;
+}
+
+p {
+    background-color: rgb(221, 221, 221);
+    margin-left: 1rem;
+    margin-bottom: 8px;
+}
+
+button {
+    margin-left: 1rem;
+    border-radius: 4px;
+}

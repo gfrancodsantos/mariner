@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Mariner</title>
+</head>
+
+<body>
+    <h1>Arqueação Bruta L < 24 m</h1>
+<div class="calc1">
+            <h2>Método Expedito</h2>
+
+           <p>Boca</p>
+            <input id="B" type="number" /><br />
+            <p>Contorno</p>
+            <input id="Co" type="number" /><br />
+            <p>Comprimento de Arqueação</p>
+            <input id="Ca" type="number" /><br />
+            
+            <p>Coef = 0,17 para embarcações com casco de madeira ou concreto.<br /> ou
+            = 0,18 para embarcações de casco metálico ou compósito (fibra de vidro
+            e outros).</p>
+            <p>Coeficiente "f"</p>
+            <input id="Coef" type="number" /><br /><br />       
+
+            <button onclick="math()">Calcular</button><br /><br />
+    
+            <p>Volume do Casco = <span></span></p>
+        </div>
+
+            <script>
+                var B = document.querySelector('#B')
+                var Co = document.querySelector('#Co')
+                var Ca = document.querySelector('#Ca')
+                var Coef = document.querySelector('#Coef')
+                var resultado = document.querySelector('Span')
+
+                /*
+                var n1 = document.querySelector('#n1')
+                var n2 = document.querySelector('#n2')
+                var resultado = document.querySelector('Span')
+                */
+
+
+
+                function math() {
+                    resultado.innerHTML = (((((parseFloat(Co.value) + parseFloat(B.value)) / 2)) ** 2) * (parseFloat(Coef.value) * parseFloat(Ca.value)))
+                }
+
+                /*
+                function subtrair() {
+                    resultado.innerHTML = parseInt(n1.value) - parseInt(n2.value)
+                }
+        
+                function multiplicar() {
+                    resultado.innerHTML = parseInt(n1.value) * parseInt(n2.value)
+                }
+        
+                function dividir() {
+                    resultado.innerHTML = parseInt(n1.value) / parseInt(n2.value)
+                }
+                */
+
+            </script>
+</body>
+
+</html>
