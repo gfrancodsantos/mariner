@@ -1,5 +1,5 @@
 *{
-    background-color: rgb(238, 235, 235);
+    background-color: rgb(240, 240, 240);
 }
 
 .calc {
@@ -8,8 +8,11 @@
 }
 
 h1 {
-    margin-left: 6rem;
+    display: flex;
+    margin-bottom: 1rem;
     font-size: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
 h2 {
