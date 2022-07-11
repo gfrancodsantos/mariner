@@ -2,17 +2,26 @@
     background-color: rgb(238, 235, 235);
 }
 
+.calc {
+    display: flex;
+    margin-top: -1rem;
+}
+
 h1 {
     margin-left: 6rem;
     font-size: 20px;
+}
+
+h2 {
+    font-size: 15px;
 }
 
 .calc1 {
     background-color: rgb(221, 221, 221);
     border: 1px solid;
     border-radius: 5px;
-    width: 400px;
-    height: 550px;
+    width: 270px;
+    height: 580px;
     margin-left: 1rem;
     
 }
@@ -32,9 +41,146 @@ p {
     background-color: rgb(221, 221, 221);
     margin-left: 1rem;
     margin-bottom: 8px;
+    font-size: 12px;
 }
 
 button {
     margin-left: 1rem;
     border-radius: 4px;
+}
+
+______________________________________________________
+
+h1 {
+    margin-left: 6rem;
+    font-size: 20px;
+}
+
+.calc2 {
+    background-color: rgb(221, 221, 221);
+    border: 1px solid;
+    border-radius: 5px;
+    width: 270px;
+    height: 580px;
+    margin-left: 1rem;
+}
+
+#calc2 {
+    background-color: rgb(221, 221, 221);
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+#calc21 {
+    background-color: rgb(221, 221, 221);
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+.calc2 h2 {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: rgb(221, 221, 221);
+    
+}
+
+.calc2 input {
+    margin-left: 1rem;
+}
+
+.calc2 #vr {
+    background-color: rgb(221, 221, 221);
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+#vt {
+    background-color: rgb(221, 221, 221);
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+button {
+    margin-left: 1rem;
+    border-radius: 4px;
+}
+
+_________________________________________________
+
+h1 {
+    margin-left: 6rem;
+    font-size: 20px;
+}
+
+.calc3 {
+    background-color: rgb(221, 221, 221);
+    border: 1px solid;
+    border-radius: 5px;
+    width: 270px;
+    height: 580px;
+    margin-left: 1rem;
+    display: inline-block;
+}
+
+.calc3 h2 {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: rgb(221, 221, 221);
+}
+
+.calc3 input {
+    margin-left: 1rem;
+}
+
+p {
+    background-color: rgb(221, 221, 221);
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+
+button {
+    margin-left: 1rem;
+    border-radius: 4px;
+}
+
+.calc3 #s1 {
+    background-color: rgb(221, 221, 221);
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+    display: inline-block;
+}
+#simp1 {
+    background-color: rgb(221, 221, 221);
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+#s2 {
+    background-color: rgb(221, 221, 221);
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+#simp2 {
+    background-color: rgb(221, 221, 221);
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+    display: inline-block;
 }

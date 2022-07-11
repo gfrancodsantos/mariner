@@ -11,61 +11,164 @@
 
 <body>
     <h1> L < 24 m</h1>
-<div class="calc1">
-            <h2>Método Expedito</h2>
 
-           <p>Boca</p>
-            <input id="B" type="number" /><br />
-            <p>Contorno</p>
-            <input id="Co" type="number" /><br />
-            <p>Comprimento de Arqueação</p>
-            <input id="Ca" type="number" /><br />
-            
-            <p>Coef = 0,17 para embarcações com casco de madeira ou concreto.<br /> ou
-            = 0,18 para embarcações de casco metálico ou compósito (fibra de vidro
-            e outros).</p>
-            <p>Coeficiente "f"</p>
-            <input id="Coef" type="number" /><br /><br />       
+            <div class="calc">
+                <div class="calc1">
+                    <h2>Método Expedito</h2>
 
-            <button onclick="math()">Calcular</button><br /><br />
-    
-            <p>Volume do Casco = <span></span></p>
-        </div>
+                    <p>Boca</p>
+                    <input id="B" type="number" /><br />
+                    <p>Contorno</p>
+                    <input id="Co" type="number" /><br />
+                    <p>Comprimento de Arqueação</p>
+                    <input id="Ca" type="number" /><br />
 
-            <script>
-                var B = document.querySelector('#B')
-                var Co = document.querySelector('#Co')
-                var Ca = document.querySelector('#Ca')
-                var Coef = document.querySelector('#Coef')
-                var resultado = document.querySelector('Span')
+                    <p>Coef = 0,17 para embarcações com casco de madeira ou concreto.<br /> ou
+                        = 0,18 para embarcações de casco metálico ou compósito (fibra de vidro
+                        e outros).</p>
+                    <p>Coeficiente "f"</p>
+                    <input id="Coef" type="number" /><br /><br />
 
-                /*
-                var n1 = document.querySelector('#n1')
-                var n2 = document.querySelector('#n2')
-                var resultado = document.querySelector('Span')
-                */
+                    <button onclick="math()">Calcular</button><br /><br />
+
+                    <p>Volume do Casco = <span></span> m³</p>
+                </div>
+
+                <script>
+                    var B = document.querySelector('#B')
+                    var Co = document.querySelector('#Co')
+                    var Ca = document.querySelector('#Ca')
+                    var Coef = document.querySelector('#Coef')
+                    var resultado = document.querySelector('Span')
 
 
+                    function math() {
+                        resultado.innerHTML = (((((parseFloat(Co.value) + parseFloat(B.value)) / 2)) ** 2) * (parseFloat(Coef.value) * parseFloat(Ca.value)))
+                    }
 
-                function math() {
-                    resultado.innerHTML = (((((parseFloat(Co.value) + parseFloat(B.value)) / 2)) ** 2) * (parseFloat(Coef.value) * parseFloat(Ca.value)))
-                }
+                </script>
 
-                /*
-                function subtrair() {
-                    resultado.innerHTML = parseInt(n1.value) - parseInt(n2.value)
-                }
-        
-                function multiplicar() {
-                    resultado.innerHTML = parseInt(n1.value) * parseInt(n2.value)
-                }
-        
-                function dividir() {
-                    resultado.innerHTML = parseInt(n1.value) / parseInt(n2.value)
-                }
-                */
 
-            </script>
+
+
+
+                <div class="calc2">
+                    <h2>Volume Retângulo</h2>
+
+                    <p>Comprimento</p>
+                    <input id="C" type="number" /><br />
+                    <p>Largura</p>
+                    <input id="L" type="number" /><br />
+                    <p>Altura</p>
+                    <input id="A" type="number" /><br /><br />
+
+                    <button onclick="calc2()">Calcular</button><br /><br />
+
+                    <p id="vr">Volume Retângulo = <div id="calc2"></div> m³</p>
+
+                    <h2>Volume Trapézio</h2>
+
+                    <p>Base Menor</p>
+                    <input id="B1" type="number" /><br />
+                    <p>Base Maior</p>
+                    <input id="B2" type="number" /><br />
+                    <p>Altura</p>
+                    <input id="A1" type="number" /><br /><br />
+
+                    <button onclick="calc21()">Calcular</button><br /><br />
+
+                    <p id="vt">Volume Trapézio = <div id="calc21"></div> m³</p>
+
+
+                </div>
+
+                <script>
+                    var C = document.querySelector('#C')
+                    var L = document.querySelector('#L')
+                    var A = document.querySelector('#A')
+                    var retangulo = document.querySelector('#calc2')
+
+
+                    function calc2() {
+                        retangulo.innerHTML = parseFloat(C.value) * parseFloat(L.value) * parseFloat(A.value)
+                    }
+
+
+
+                    var B1 = document.querySelector('#B1')
+                    var B2 = document.querySelector('#B2')
+                    var A1 = document.querySelector('#A1')
+                    var trapezio = document.querySelector('#calc21')
+
+
+                    function calc21() {
+                        trapezio.innerHTML = (((parseFloat(B1.value) + parseFloat(B2.value)) * parseFloat(A1.value))) / 2
+                    }
+
+
+                </script>
+
+
+
+
+
+
+                <div class="calc3">
+                    <h2>1ª Regra de Simpson</h2>
+
+                    <p>Espaçamento entre os pontos considerados:</p>
+                    <input id="S" type="number" /><br />
+                    <p>Ordenada na posição i:</p>
+                    <input id="Yi" type="number" /><br />
+                    <p>Número de espaçamentos:</p>
+                    <input id="N" type="number" /><br /><br />
+
+                    <button onclick="simp1()">Calcular</button><br /><br />
+
+                    <p id="simp1">Volume = <div id="s1"></div></p>
+
+                    <h2>2ª Regra de Simpson</h2>
+
+                    <p>Comprimento</p>
+                    <input id="C" type="number" /><br />
+                    <p>Largura</p>
+                    <input id="L" type="number" /><br />
+                    <p>Altura</p>
+                    <input id="A" type="number" /><br /><br />
+
+                    <button onclick="simp2()">Calcular</button><br /><br />
+
+                    <p id="simp2">Volume = <div id="s2"></div></p>
+                </div>
+
+                <script>
+                    var S = document.querySelector('#S')
+                    var Yi = document.querySelector('#Yi')
+                    var N = document.querySelector('#N')
+                    var regra1 = document.querySelector('#s1')
+
+
+                    function simp1() {
+                        regra1.innerHTML = (parseFloat(S.value) / 3) *  (parseFloat(Y.value) * parseFloat(A.value)
+                    }
+
+
+
+                    var B1 = document.querySelector('#B1')
+                    var B2 = document.querySelector('#B2')
+                    var A1 = document.querySelector('#A1')
+                    var regra2 = document.querySelector('#s2')
+
+
+                    function simp2() {
+                        regra2.innerHTML = (((parseFloat(B1.value) + parseFloat(B2.value)) * parseFloat(A1.value))) / 2
+                    }
+
+
+                </script>
+            </div>
+
+
 </body>
 
 </html>
