@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Mariner</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+    <div class="main"></div>
+    <h1> MARINER</h1>
+
+    <div class="calc">
+        <div class="calc1">
+            <h2>Método Expedito</h2>
+
+            <p>Boca</p>
+            <input id="B" type="number" /><br />
+            <p>Contorno</p>
+            <input id="Co" type="number" /><br />
+            <p>Comprimento de Arqueação</p>
+            <input id="Ca" type="number" /><br />
+
+            <p>Coef = 0,17 para embarcações com casco de madeira ou concreto.<br /> ou
+                = 0,18 para embarcações de casco metálico ou compósito (fibra de vidro
+                e outros).</p>
+            <p>Coeficiente "f"</p>
+            <input id="Coef" type="number" /><br /><br />
+
+            <button onclick="math()">Calcular</button><br /><br />
+
+            <p>Volume do Casco = <span></span> m³</p>
+        </div>
+
+
+        <div class="calc2">
+            <h2>Volume Retângulo</h2>
+
+            <p>Comprimento</p>
+            <input id="C" type="number" /><br />
+            <p>Largura</p>
+            <input id="L" type="number" /><br />
+            <p>Altura</p>
+            <input id="A" type="number" /><br /><br />
+
+            <button onclick="calc2()">Calcular</button><br /><br />
+
+            <p id="vr">Volume Retângulo =
+            <div id="calc2"></div> m³</p>
+
+            <h2>Volume Trapézio</h2>
+
+            <p>Base Menor</p>
+            <input id="B1" type="number" /><br />
+            <p>Base Maior</p>
+            <input id="B2" type="number" /><br />
+            <p>Altura</p>
+            <input id="A1" type="number" /><br /><br />
+
+            <button onclick="calc21()">Calcular</button><br /><br />
+
+            <p id="vt">Volume Trapézio =
+            <div id="calc21"></div> m³</p>
+
+
+        </div>
+
+
+        <div class="calc3">
+            <h2>1ª Regra de Simpson</h2>
+
+            <p>L=</p>
+            <input id="Ls" type="number" /><br />
+            <p>B=</p>
+            <input id="Bs" type="number" /><br /><br />
+            <p>Altura de cada "fatia":</p>
+            <div class="grid1">
+                <p>y1=</p>
+                <input id="y1" type="number" /><br /><br />
+                <p>y2=</p>
+                <input id="y2" type="number" /><br /><br />
+                <p>y3=</p>
+                <input id="y3" type="number" /><br /><br />
+                <p>y4=</p>
+                <input id="y4" type="number" /><br /><br />
+                <p>y5=</p>
+                <input id="y5" type="number" /><br /><br />
+            </div>
+            <div class="grid2">
+                <p>y6=</p>
+                <input id="y6" type="number" /><br /><br />
+                <p>y7=</p>
+                <input id="y7" type="number" /><br /><br />
+                <p>y8=</p>
+                <input id="y8" type="number" /><br /><br />
+                <p>y9=</p>
+                <input id="y9" type="number" /><br /><br />
+                <p>y10=</p>
+                <input id="y10" type="number" /><br /><br />
+                <div class="grid3">
+                    <p>y11=</p>
+                    <input id="y11" type="number" /><br /><br />
+                </div>
+            </div>
+
+            <button onclick="simp1()">Calcular</button><br /><br />
+
+            <p id="s1">Volume do casco =
+            <div id="simp1"></div> m³
+            </p>
+
+            <div class="regra2">
+                <h2>2ª Regra de Simpson</h2>
+
+                <p>L=</p>
+                <input id="Comp" type="number" /><br />
+                <p>B=</p>
+                <input id="Boca" type="number" /><br /><br />
+                <p>Altura de cada "fatia":</p>
+                <div class="grid1">
+                    <p>y1=</p>
+                    <input id="yy1" type="number" /><br /><br />
+                    <p>y2=</p>
+                    <input id="yy2" type="number" /><br /><br />
+                    <p>y3=</p>
+                    <input id="yy3" type="number" /><br /><br />
+                    <p>y4=</p>
+                    <input id="yy4" type="number" /><br /><br />
+                    <p>y5=</p>
+                    <input id="yy5" type="number" /><br /><br />
+                </div>
+                <div class="grid2">
+                    <p>y6=</p>
+                    <input id="yy6" type="number" /><br /><br />
+                    <p>y7=</p>
+                    <input id="yy7" type="number" /><br /><br />
+                    <p>y8=</p>
+                    <input id="yy8" type="number" /><br /><br />
+                    <p>y9=</p>
+                    <input id="yy9" type="number" /><br /><br />
+                    <p>y10=</p>
+                    <input id="yy10" type="number" /><br /><br />
+                    <div class="grid3">
+                        <p>y11=</p>
+                        <input id="yy11" type="number" /><br /><br />
+                        <p>y12=</p>
+                        <input id="yy12" type="number" /><br /><br />
+                        <p>y13=</p>
+                        <input id="yy13" type="number" /><br /><br />
+                    </div>
+                </div>
+
+                <button onclick="simp2()">Calcular</button><br /><br />
+
+                <p id="s1">Volume do casco =
+                <div id="simp2"></div> m³
+                </p>
+            </div>
+        </div>
+
+        <div class="arqueacao">
+
+            <h2>Arqueação Bruta - L < 24m</h2>
+
+                    <p>Loa =</p>
+                    <input id="Loa" type="number" /><br />
+                    <p>Lpp =</p>
+                    <input id="Lpp" type="number" /><br />
+                    <p>B =</p>
+                    <input id="Barq" type="number" /><br /><br />
+                    <p>Co =</p>
+                    <input id="Coarq" type="number" /><br /><br />
+                    <p>Coef = 0,17 para embarcações com casco de madeira ou concreto.<br /> ou
+                        = 0,18 para embarcações de casco metálico ou compósito (fibra de vidro
+                        e outros).</p>
+                    <p>Coeficiente "f" =</p>
+                    <input id="Coef1" type="number" /><br /><br />
+
+                    <p><b>Dimensões da Casaria:</b></p>
+                    <p>Comprimento =</p>
+                    <input id="C1" type="number" /><br />
+                    <p>Largura =</p>
+                    <input id="L1" type="number" /><br />
+                    <p>Altura =</p>
+                    <input id="A1" type="number" /><br /><br />
+
+                    <p id="vt">B + Co =
+                    <div id="calcarq"></div>m</p>
+
+                    <p id="vt">Ca (comprimento de Arqueação) =
+                    <div id="calcarq2"></div>m</p>
+
+                    <p id="vt">V (Volume Espaços Fechados) =
+                    <div id="calcarq3"></div> m</p>
+
+                    <p id="vt">K1 =
+                    <div id="k1"></div> m</p>
+
+                    <p id="vt">AB =
+                    <div id="ab"></div> m</p>
+
+                    <button onclick="calcarq(); calcarq2(); calcarq3(); k1(); ab()">Calcular</button><br /><br />
+
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
