@@ -539,7 +539,7 @@ function K2() {
     }
 
     else {
-        k21.innerHTML = NaN;
+        k21.innerHTML = 0;
     }
 }
 
@@ -689,7 +689,7 @@ function calII() { /* K2Vc(4H/3P)²*/
     }
 
     else {
-        II.innerHTML = NaN;
+        II.innerHTML = 0;
     }
 
     return II.innerHTML;
