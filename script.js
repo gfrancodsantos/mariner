@@ -735,16 +735,16 @@ var arqliqfinal = document.querySelector('#alf')
 
 
 function alf() {
-    if (al >= calIII()) {
-        arqliqfinal.innerHTML = al();
+    if (al() >= calIII()) {
+        arqliqfinal.innerHTML = parseFloat(calI2()) + (1.25 * (parseFloat(ab()) + 10000) / 10000 * (parseFloat(n11.value) + (parseFloat(n22.value) / 10)));
     }
 
-    else if (al < calIII()) {
-        arqliqfinal.innerHTML = calIII();
+    else if (al() < calIII()) {
+        arqliqfinal.innerHTML = 0.3 * ab();
     }
 
     else {
-        arqliqfinal = NaN;
+        arqliqfinal = 0;
     }
 }
 
