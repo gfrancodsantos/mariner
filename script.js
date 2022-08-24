@@ -96,122 +96,123 @@ var calcar3 = document.querySelector('#calcarq3')
 var calcar4 = document.querySelector('#calculark1')
 var calcar5 = document.querySelector('#ab')
 
+var comparq1 = document.querySelector('#comparq')
 
 function calcarq() {
     calcar.innerHTML = parseFloat(Barq.value) + parseFloat(Coarq.value)
 }
 
-function calcarq2() {
+/*function calcarq2() {
     calcar2.innerHTML = (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value)))
-}
+}*/
 
 function M() {
     MULTI.innerHTML = (((parseFloat(Barq.value) + parseFloat(Coarq.value)) / 2) ** 2) * parseFloat(Coef1.value)
 }
 
 function calcarq3() {
-    calcar3.innerHTML = (((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value))))
+    calcar3.innerHTML = (((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value))))
 }
 
 
 function calculark1() {
 
-    var volume = (((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value))));
+    var volume = (((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value))));
 
     if (volume >= 1 && volume < 2) {
-        calcar4.innerHTML = ((0.2000 + (0.2060 - 0.2000) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 1)) / (2 - 1)));
+        calcar4.innerHTML = ((0.2000 + (0.2060 - 0.2000) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 1)) / (2 - 1)));
     }
 
     else if (volume >= 2 && volume < 3) {
-        calcar4.innerHTML = (0.2060 + (0.2095 - 0.2060) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 2) / (3 - 2)));
+        calcar4.innerHTML = (0.2060 + (0.2095 - 0.2060) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 2) / (3 - 2)));
     }
 
     else if (volume >= 3 && volume < 4) {
-        calcar4.innerHTML = (0.2095 + (0.2120 - 0.2095) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 3) / (4 - 3)));
+        calcar4.innerHTML = (0.2095 + (0.2120 - 0.2095) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 3) / (4 - 3)));
     }
 
     else if (volume >= 4 && volume < 5) {
-        calcar4.innerHTML = (0.2120 + (0.2139 - 0.2120) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 4) / (5 - 4)));
+        calcar4.innerHTML = (0.2120 + (0.2139 - 0.2120) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 4) / (5 - 4)));
     }
 
     else if (volume >= 5 && volume < 6) {
-        calcar4.innerHTML = (0.2193 + (0.2155 - 0.2193) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 5) / (6 - 5)));
+        calcar4.innerHTML = (0.2193 + (0.2155 - 0.2193) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 5) / (6 - 5)));
     }
 
     else if (volume >= 6 && volume < 7) {
-        calcar4.innerHTML = (0.2155 + (0.2169 - 0.2155) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 6) / (7 - 6)));
+        calcar4.innerHTML = (0.2155 + (0.2169 - 0.2155) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 6) / (7 - 6)));
     }
 
     else if (volume >= 7 && volume < 8) {
-        calcar4.innerHTML = (0.2169 + (0.2180 - 0.2169) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 7) / (8 - 7)));
+        calcar4.innerHTML = (0.2169 + (0.2180 - 0.2169) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 7) / (8 - 7)));
     }
 
     else if (volume >= 8 && volume < 9) {
-        calcar4.innerHTML = (0.2180 + (0.2190 - 0.2180) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 8) / (9 - 8)));
+        calcar4.innerHTML = (0.2180 + (0.2190 - 0.2180) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 8) / (9 - 8)));
     }
 
     else if (volume >= 9 && volume < 10) {
-        calcar4.innerHTML = (0.2190 + (0.2200 - 0.2190) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 9) / (10 - 9)));
+        calcar4.innerHTML = (0.2190 + (0.2200 - 0.2190) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 9) / (10 - 9)));
     }
 
     else if (volume >= 10 && volume < 20) {
-        calcar4.innerHTML = (0.2200 + (0.2260 - 0.2200) * ((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 10) / (20 - 10));
+        calcar4.innerHTML = (0.2200 + (0.2260 - 0.2200) * ((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 10) / (20 - 10));
     }
 
     else if (volume >= 20 && volume < 30) {
-        calcar4.innerHTML = (0.2260 + (0.2295 - 0.2260) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 20) / (30 - 20)));
+        calcar4.innerHTML = (0.2260 + (0.2295 - 0.2260) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 20) / (30 - 20)));
     }
 
     else if (volume >= 30 && volume < 40) {
-        calcar4.innerHTML = (0.2295 + (0.2320 - 0.2295) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 30) / (40 - 30)));
+        calcar4.innerHTML = (0.2295 + (0.2320 - 0.2295) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 30) / (40 - 30)));
     }
 
     else if (volume >= 40 && volume < 50) {
-        calcar4.innerHTML = (0.2320 + (0.2340 - 0.2320) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 40) / (50 - 40)));
+        calcar4.innerHTML = (0.2320 + (0.2340 - 0.2320) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 40) / (50 - 40)));
     }
 
     else if (volume >= 50 && volume < 60) {
-        calcar4.innerHTML = (0.2340 + (0.2356 - 0.2340) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 50) / (60 - 50)));
+        calcar4.innerHTML = (0.2340 + (0.2356 - 0.2340) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 50) / (60 - 50)));
     }
 
     else if (volume >= 60 && volume < 70) {
-        calcar4.innerHTML = (0.2356 + (0.2369 - 0.2356) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 60) / (70 - 60)));
+        calcar4.innerHTML = (0.2356 + (0.2369 - 0.2356) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 60) / (70 - 60)));
     }
 
     else if (volume >= 70 && volume < 80) {
-        calcar4.innerHTML = (0.2369 + (0.2381 - 0.2369) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 70) / (80 - 70)));
+        calcar4.innerHTML = (0.2369 + (0.2381 - 0.2369) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 70) / (80 - 70)));
     }
 
     else if (volume >= 80 && volume < 90) {
-        calcar4.innerHTML = (0.2381 + (0.2391 - 0.2381) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 80) / (90 - 80)));
+        calcar4.innerHTML = (0.2381 + (0.2391 - 0.2381) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 80) / (90 - 80)));
     }
 
     else if (volume >= 90 && volume < 100) {
-        calcar4.innerHTML = (0.2391 + (0.2400 - 0.2391) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 90) / (100 - 90)));
+        calcar4.innerHTML = (0.2391 + (0.2400 - 0.2391) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 90) / (100 - 90)));
     }
 
     else if (volume >= 100 && volume < 200) {
-        calcar4.innerHTML = (0.2400 + (0.2460 - 0.2400) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 100) / (200 - 100)));
+        calcar4.innerHTML = (0.2400 + (0.2460 - 0.2400) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 100) / (200 - 100)));
     }
 
     else if (volume >= 200 && volume < 300) {
-        calcar4.innerHTML = (0.2460 + (0.2495 - 0.2460) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 200) / (300 - 200)));
+        calcar4.innerHTML = (0.2460 + (0.2495 - 0.2460) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 200) / (300 - 200)));
     }
 
     else if (volume >= 300 && volume < 400) {
-        calcar4.innerHTML = (0.2495 + (0.2520 - 0.2495) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 300) / (400 - 300)));
+        calcar4.innerHTML = (0.2495 + (0.2520 - 0.2495) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 300) / (400 - 300)));
     }
 
     else if (volume >= 400 && volume < 500) {
-        calcar4.innerHTML = (0.2520 + (0.2540 - 0.2520) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 400) / (500 - 400)));
+        calcar4.innerHTML = (0.2520 + (0.2540 - 0.2520) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 400) / (500 - 400)));
     }
 
     else if (volume >= 500 && volume < 600) {
-        calcar4.innerHTML = (0.2540 + (0.2556 - 0.2540) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 500) / (600 - 500)));
+        calcar4.innerHTML = (0.2540 + (0.2556 - 0.2540) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 500) / (600 - 500)));
     }
 
     else if (volume >= 600 && volume < 700) {
-        calcar4.innerHTML = (0.2556 + (0.2569 - 0.2556) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 600) / (700 - 600)));
+        calcar4.innerHTML = (0.2556 + (0.2569 - 0.2556) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 600) / (700 - 600)));
     }
 
     else {
@@ -222,102 +223,102 @@ function calculark1() {
 
 function ab() {
 
-    var volume1 = (((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value))));
+    var volume1 = (((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value))));
 
     if (volume1 >= 1 && volume1 < 2) {
-        calcar5.innerHTML = ((0.2000 + (0.2060 - 0.2000) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 1)) / (2 - 1))) * volume1;
+        calcar5.innerHTML = ((0.2000 + (0.2060 - 0.2000) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 1)) / (2 - 1))) * volume1;
     }
 
     else if (volume1 >= 2 && volume1 < 3) {
-        calcar5.innerHTML = (0.2060 + (0.2095 - 0.2060) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 2) / (3 - 2))) * volume1;
+        calcar5.innerHTML = (0.2060 + (0.2095 - 0.2060) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 2) / (3 - 2))) * volume1;
     }
 
     else if (volume1 >= 3 && volume1 < 4) {
-        calcar5.innerHTML = (0.2095 + (0.2120 - 0.2095) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 3) / (4 - 3))) * volume1;
+        calcar5.innerHTML = (0.2095 + (0.2120 - 0.2095) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 3) / (4 - 3))) * volume1;
     }
 
     else if (volume1 >= 4 && volume1 < 5) {
-        calcar5.innerHTML = (0.2120 + (0.2139 - 0.2120) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 4) / (5 - 4))) * volume1;
+        calcar5.innerHTML = (0.2120 + (0.2139 - 0.2120) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 4) / (5 - 4))) * volume1;
     }
 
     else if (volume1 >= 5 && volume1 < 6) {
-        calcar5.innerHTML = (0.2193 + (0.2155 - 0.2193) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 5) / (6 - 5))) * volume1;
+        calcar5.innerHTML = (0.2193 + (0.2155 - 0.2193) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 5) / (6 - 5))) * volume1;
     }
 
     else if (volume1 >= 6 && volume1 < 7) {
-        calcar5.innerHTML = (0.2155 + (0.2169 - 0.2155) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 6) / (7 - 6))) * volume1;
+        calcar5.innerHTML = (0.2155 + (0.2169 - 0.2155) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 6) / (7 - 6))) * volume1;
     }
 
     else if (volume1 >= 7 && volume1 < 8) {
-        calcar5.innerHTML = (0.2169 + (0.2180 - 0.2169) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 7) / (8 - 7))) * volume1;
+        calcar5.innerHTML = (0.2169 + (0.2180 - 0.2169) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 7) / (8 - 7))) * volume1;
     }
 
     else if (volume1 >= 8 && volume1 < 9) {
-        calcar5.innerHTML = (0.2180 + (0.2190 - 0.2180) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 8) / (9 - 8))) * volume1;
+        calcar5.innerHTML = (0.2180 + (0.2190 - 0.2180) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 8) / (9 - 8))) * volume1;
     }
 
     else if (volume1 >= 9 && volume1 < 10) {
-        calcar5.innerHTML = (0.2190 + (0.2200 - 0.2190) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 9) / (10 - 9))) * volume1;
+        calcar5.innerHTML = (0.2190 + (0.2200 - 0.2190) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 9) / (10 - 9))) * volume1;
     }
 
     else if (volume1 >= 10 && volume1 < 20) {
-        calcar5.innerHTML = (0.2200 + (0.2260 - 0.2200) * ((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 10) / (20 - 10)) * volume1;
+        calcar5.innerHTML = (0.2200 + (0.2260 - 0.2200) * ((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 10) / (20 - 10)) * volume1;
     }
 
     else if (volume1 >= 20 && volume1 < 30) {
-        calcar5.innerHTML = (0.2260 + (0.2295 - 0.2260) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 20) / (30 - 20))) * volume1;
+        calcar5.innerHTML = (0.2260 + (0.2295 - 0.2260) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 20) / (30 - 20))) * volume1;
     }
 
     else if (volume1 >= 30 && volume1 < 40) {
-        calcar5.innerHTML = (0.2295 + (0.2320 - 0.2295) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 30) / (40 - 30))) * volume1;
+        calcar5.innerHTML = (0.2295 + (0.2320 - 0.2295) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 30) / (40 - 30))) * volume1;
     }
 
     else if (volume1 >= 40 && volume1 < 50) {
-        calcar5.innerHTML = (0.2320 + (0.2340 - 0.2320) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 40) / (50 - 40))) * volume1;
+        calcar5.innerHTML = (0.2320 + (0.2340 - 0.2320) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 40) / (50 - 40))) * volume1;
     }
 
     else if (volume1 >= 50 && volume1 < 60) {
-        calcar5.innerHTML = (0.2340 + (0.2356 - 0.2340) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 50) / (60 - 50))) * volume1;
+        calcar5.innerHTML = (0.2340 + (0.2356 - 0.2340) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 50) / (60 - 50))) * volume1;
     }
 
     else if (volume1 >= 60 && volume1 < 70) {
-        calcar5.innerHTML = (0.2356 + (0.2369 - 0.2356) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 60) / (70 - 60))) * volume1;
+        calcar5.innerHTML = (0.2356 + (0.2369 - 0.2356) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 60) / (70 - 60))) * volume1;
     }
 
     else if (volume1 >= 70 && volume1 < 80) {
-        calcar5.innerHTML = (0.2369 + (0.2381 - 0.2369) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 70) / (80 - 70))) * volume1;
+        calcar5.innerHTML = (0.2369 + (0.2381 - 0.2369) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 70) / (80 - 70))) * volume1;
     }
 
     else if (volume1 >= 80 && volume1 < 90) {
-        calcar5.innerHTML = (0.2381 + (0.2391 - 0.2381) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 80) / (90 - 80))) * volume1;
+        calcar5.innerHTML = (0.2381 + (0.2391 - 0.2381) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 80) / (90 - 80))) * volume1;
     }
 
     else if (volume1 >= 90 && volume1 < 100) {
-        calcar5.innerHTML = (0.2391 + (0.2400 - 0.2391) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 90) / (100 - 90))) * volume1;
+        calcar5.innerHTML = (0.2391 + (0.2400 - 0.2391) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 90) / (100 - 90))) * volume1;
     }
 
     else if (volume1 >= 100 && volume1 < 200) {
-        calcar5.innerHTML = (0.2400 + (0.2460 - 0.2400) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 100) / (200 - 100))) * volume1;
+        calcar5.innerHTML = (0.2400 + (0.2460 - 0.2400) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 100) / (200 - 100))) * volume1;
     }
 
     else if (volume1 >= 200 && volume1 < 300) {
-        calcar5.innerHTML = (0.2460 + (0.2495 - 0.2460) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 200) / (300 - 200))) * volume1;
+        calcar5.innerHTML = (0.2460 + (0.2495 - 0.2460) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 200) / (300 - 200))) * volume1;
     }
 
     else if (volume1 >= 300 && volume1 < 400) {
-        calcar5.innerHTML = (0.2495 + (0.2520 - 0.2495) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 300) / (400 - 300))) * volume1;
+        calcar5.innerHTML = (0.2495 + (0.2520 - 0.2495) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 300) / (400 - 300))) * volume1;
     }
 
     else if (volume1 >= 400 && volume1 < 500) {
-        calcar5.innerHTML = (0.2520 + (0.2540 - 0.2520) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 400) / (500 - 400))) * volume1;
+        calcar5.innerHTML = (0.2520 + (0.2540 - 0.2520) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 400) / (500 - 400))) * volume1;
     }
 
     else if (volume1 >= 500 && volume1 < 600) {
-        calcar5.innerHTML = (0.2540 + (0.2556 - 0.2540) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 500) / (600 - 500))) * volume1;
+        calcar5.innerHTML = (0.2540 + (0.2556 - 0.2540) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 500) / (600 - 500))) * volume1;
     }
 
     else if (volume1 >= 600 && volume1 < 700) {
-        calcar5.innerHTML = (0.2556 + (0.2569 - 0.2556) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (0.5 * (parseFloat(Lpp.value) + parseFloat(Loa.value))))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 600) / (700 - 600))) * volume1;
+        calcar5.innerHTML = (0.2556 + (0.2569 - 0.2556) * (((((((parseFloat(Coarq.value) + parseFloat(Barq.value)) / 2)) ** 2) * (parseFloat(Coef1.value) * (parseFloat(comparq1.value)))) + ((parseFloat(C1.value) * parseFloat(L1.value) * parseFloat(A1.value)) + ((parseFloat(C2.value) * parseFloat(L2.value) * parseFloat(A2.value)))) - 600) / (700 - 600))) * volume1;
     }
 
     else {
