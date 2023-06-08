@@ -1,0 +1,478 @@
+* {
+}
+.calc {
+    display: flex;
+    margin-top: -1rem;
+}
+
+.main {
+    background-color: black;
+    height: 5rem;
+    width: 100%;
+    margin-top: -1rem;
+    margin-left: 0rem;
+}
+
+button {
+    color: rgb(255, 255, 255);
+    background-color: rgb(58, 150, 212);
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;   
+    border: none;    
+    width: 300px;
+    height: 35px;
+    margin-top: 25rem;
+    border-radius: 7px;
+    margin-left: 150px;
+    letter-spacing: 1px;
+    font-size: 12px;
+}
+
+h1 {
+    display: flex;
+    margin-bottom: 2rem;
+    margin-top: -4rem;
+    height: 4rem;
+    letter-spacing: 5px;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;   
+}
+
+h2 {
+    font-size: 15px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;   
+}
+
+.calc1 {
+    background-image: url(./Imagem/f.jpg);
+    border: 1px solid;
+    border-radius: 5px;
+    width: 270px;
+    height: 700px;
+    margin-left: 1rem;
+
+}
+
+.calc1 h2 {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;   
+}
+
+.calc1 input {
+    margin-left: 1rem;
+}
+
+p {
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  
+    }
+
+
+h1 {
+    margin-left: 6rem;
+    font-size: 20px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;   
+}
+
+.calc2 {
+    background-image: url(./Imagem/f.jpg);
+    border: 1px solid;
+    border-radius: 5px;
+    width: 270px;
+    height: 700px;
+    margin-left: 1rem;
+}
+
+#calc2 {
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+#calc21 {
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+.calc2 h2 {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.calc2 input {
+    margin-left: 1rem;
+}
+
+.calc2 #vr {
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+#vt {
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+
+h1 {
+    margin-left: 6rem;
+    font-size: 20px;
+}
+
+.calc3 {
+    border: 1px solid;
+    border-radius: 5px;
+    width: 270px;
+    height: 700px;
+    margin-left: 1rem;
+    background-image: url(./Imagem/f.jpg);
+}
+
+.calc3 input {
+    width: 50px;
+    height: 10px;
+}
+
+
+
+.grid2 {
+    float: right;
+    margin-top: -22rem;
+    margin-right: 7rem;
+}
+
+.grid3 {
+    float: right;
+    margin-top: -22rem;
+    margin-right: -5rem;
+}
+
+.calc3 h2 {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 1rem;
+}
+
+.calc3 input {
+    margin-left: 1rem;
+}
+
+p { 
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+
+
+.calc3 #s1 {
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+#simp1 {
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+#s2 {
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+.regra2 {
+    margin-top: -38.8rem;
+    background-image: url(./Imagem/f.jpg);
+    border: 1px solid;
+    border-radius: 5px;
+    width: 270px;
+    height: 700px;
+    margin-left: 18rem;
+}
+
+#simp2 {
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+.arqueacao { 
+    border-radius: 15px;
+    width: 630px;
+    height: 1700px;
+    margin-left: 0rem;
+    background-color: rgb(8, 92, 165);
+     
+}
+
+.dim {
+    margin-left: 0rem;
+    margin-top: -16rem;
+}
+
+.dim2 {
+    margin-top: 0rem;
+}
+
+.result {
+    margin-top: 3rem;
+    margin-left: 2rem;
+}
+
+#rr {
+    margin-left: 1rem; 
+}
+
+.result2{
+    margin-left: 22rem;
+    margin-top: -57rem;
+}
+
+.part1 {
+    margin-top: -22.5rem;
+    margin-left: 20rem;
+}
+
+.arqueacao input {
+    margin-left: 3rem;
+}
+
+.arqueacao p {
+    margin-left: 3rem;
+}
+
+.arqueacao h2 {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 1rem;
+    padding-top: 3rem;
+    margin-bottom: 3rem;
+    color: black;
+}
+
+#Bco {
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+#Ca {
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+
+#V1 {
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+#K1 {
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+#Ab {
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+#text {
+    color: white;
+}
+
+#calcarq {
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+    display: inline-block;
+    color: white;
+}
+
+#calcarq2 {
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+    display: inline-block;
+    color: white;
+}
+
+#calcarq3 {
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+    display: inline-block;
+    color: white;
+}
+
+#calculark1 {
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+    display: inline-block;
+    color: white;
+}
+
+#ab {
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+    display: inline-block;
+    color: white;
+}
+
+#M {
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+    display: inline-block;
+    color: white;
+}
+
+#calII {
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+    display: inline-block;
+    color: white;
+}
+
+#calIII {
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+    display: inline-block;
+    color: white;
+}
+
+#al {
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+    display: inline-block;
+    color: white;
+}
+
+#caln1n2 {
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+    display: inline-block;
+    color: white;
+}
+
+#calVU {
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+    display: inline-block;
+    color: white;
+}
+
+#calI {
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+    display: inline-block;
+    color: white;
+}
+
+#calII {
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+    display: inline-block;
+    color: white;
+}
+
+#calIII {
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+    display: inline-block;
+    color: white;
+}
+
+#calI1 {
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+    display: inline-block;
+    color: white;
+}
+
+#calI2 {
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+    display: inline-block;
+    color: white;
+}
+
+#K2 {
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+    display: inline-block;
+    color: white;
+}
+
+#alf {
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+    display: inline-block;
+    color: white;
+}
+
+#text1 {
+    margin-left: 1rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+    display: inline-block;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;   
+}
+
+input {
+    background-color: rgb(223, 223, 223);
+    border: none;
+    color: rgb(0, 0, 0);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;   
+}

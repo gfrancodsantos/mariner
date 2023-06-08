@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Mariner</title>
+</head>
+
+<body>
+
+    <div class="arqueacao">
+
+        <h2>Arqueação Bruta L < 24m</h2>
+
+                <p>Loa =</p>
+                <input id="Loa" type="number" /><br />
+                <p>Lpp =</p>
+                <input id="Lpp" type="number" /><br />
+                <p>B =</p>
+                <input id="Barq" type="number" /><br />
+                <p>P =</p>
+                <input id="pontal" type="number" /><br />
+                <p>Co =</p>
+                <input id="Coarq" type="number" /><br />
+                <p>H moldado =</p>
+                <input id="hmoldado" type="number" /><br /><br /><br />
+                <div class="part1">
+                    <p>H leve =</p>
+                    <input id="hleve" type="number" /><br />
+                    <p>H carregado =</p>
+                    <input id="hcarregado" type="number" /><br />
+                    <p>L (comprimento de regra) =</p>
+                    <input id="compregra" type="number" /><br />
+                    <p>Ca (comprimento de arqueação) =</p>
+                    <input id="comparq" type="number" /><br /><br />
+
+                    <p>Coef = 0,17 para embarcações <br />com casco de madeira ou <br/>concreto.<br /><br /> ou
+                        = 0,18 para embarcações de <br/>casco metálico ou compósito<br /> (fibra de vidro
+                        e outros).</p>
+                    <p>Coeficiente "f" =</p>
+                    <input id="Coef1" type="number" /><br />
+                    <p>Número de tripulantes =</p>
+                    <input id="numtrip" type="number" /><br />
+                    <p>N1=</p>
+                    <input id="n1" type="number" /><br />
+                    <p>N2 =</p>
+                    <input id="n2" type="number" /><br />
+                    <p>Vc (Espaços de carga) [m³]=</p>
+                    <input id="volumecarga" type="number" /><br />
+
+
+                </div>
+                <div class="dim">
+                    <p><b>Dimensões da Casaria 1:</b></p>
+                    <p>Comprimento =</p>
+                    <input id="C1" type="number" /><br />
+                    <p>Largura =</p>
+                    <input id="L1" type="number" /><br />
+                    <p>Altura =</p>
+                    <input id="A1" type="number" /><br /><br />
+                </div>
+
+                <div class="dim2">
+                    <p><b>Dimensões da Casaria 2:</b></p>
+                    <p>Comprimento =</p>
+                    <input id="C2" type="number" /><br />
+                    <p>Largura =</p>
+                    <input id="L2" type="number" /><br />
+                    <p>Altura =</p>
+                    <input id="A2" type="number" /><br /><br />
+                </div>
+
+                <div class="result">
+                    <p id="rr"><b>Resultados:</b></p>
+                    <p id="vt">B + Co =
+                    <div id="calcarq"></div><p id="text1">m</p></p>
+
+                  
+                    <p id="vt">M =
+                    <div id="M"></div><p id="text1">m</p></p>
+
+                    <p id="vt">V (Volume Espaços Fechados) =
+                    <div id="calcarq3"></div><p id="text1">m³</p></p>
+
+                    <p id="vt">K1 =
+                    <div id="calculark1"></div><p id="text1"> m</p></p>
+
+                    <b>
+                        <p id="vt">AB =
+                        <div id="ab"></div><p id="text1"> m</p></p>
+                    </b>
+
+                    <button onclick="alf(); K2(); calI1(); calI2(); caln1n2(); calVU(); calI(); calII(); calIII(); al(); calcarq(); calcarq3();
+                        calculark1(); ab(); M()">CALCULAR</button><br /><br />
+                </div>
+
+                <div class="result2">
+                    <p id="rr"><b>Resultados:</b></p>
+                    <p id="vt">N1 + N2 =
+                    <div id="caln1n2"></div>
+                    </p>
+
+                    <b><p id="vt">Valor usado =
+                    <div id="calVU"></div>
+                    </p></b>
+                    <p id="rr"><b>Expressões das notas:</b></p>
+                    <p id="vt">I) (4H / 3P)² =
+                    <div id="calI"></div>
+                    </p>
+
+                    <b><p id="vt">I) Valor usado =
+                        <div id="calI1"></div>
+                        </p></b>
+
+                        <p id="vt">K2 =
+                            <div id="K2"></div>
+                            </p>
+
+                    <p id="vt">II) K2*Vc*(4H / 3P)² =
+                    <div id="calII"></div><p id="text1"> m</p></p>
+
+                    <b><p id="vt">II) Valor usado =
+                        <div id="calI2"></div>
+                        </p></b>
+
+                    <p id="vt">III) 0,3*AB =
+                    <div id="calIII"></div><p id="text1"> m</p></p>
+
+                    <p id="vt">Arqueação Líquida =
+                    <div id="al"></div><p id="text1"> m</p></p>
+
+                    <p id="rr">Comparação do valor obtido em III)</br>
+                        Se AL calculada for >= 0,3*AB, usar valor calculado</br>
+                        Se AL calculada for < 0,3*AB, usar AL=0,3*AB</p>
+
+                            <b>
+                                <p id="vt">Arqueação Líquida Final =
+                                <div id="alf"></div><p id="text1"> m</p></p></b>
+                </div>
+    </div>
+
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
